@@ -1,5 +1,4 @@
 import Footer from '@/components/landingpage/Footer';
-import PatientSubscribe from '@/components/payments/PatientSubscribe';
 import { getPatientById } from '@/lib/actions/patient.action';
 import { redirect } from 'next/navigation';
 import React from 'react'
@@ -35,8 +34,11 @@ const pricing = async({ params }: { params: { userId: string } }) => {
           Get started with a plan.
          </h3>
         </div>
-       <div className='w-full mt-5'>
-       <PatientSubscribe patient={patient}/>
+       <div className='w-full mt-5 p-8'>
+         <div className='text-center text-gray-600 dark:text-gray-400'>
+           <p className='text-lg'>Subscription functionality is currently unavailable.</p>
+           <p className='mt-2'>Please contact support for more information.</p>
+         </div>
        </div>
        <div>
        {/* <Reviews/> */}

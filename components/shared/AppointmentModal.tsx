@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Appointment } from "@/types";
 import AppointmentForm from "../forms/AppointmentForm";
 
 export const AppointmentModal = ({

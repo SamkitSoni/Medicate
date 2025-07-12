@@ -277,7 +277,7 @@ const RegisterForm = ({
                   <RadioGroup
                     className="flex h-11 gap-6 xl:justify-between"
                     onValueChange={field.onChange}
-                    defaultValue={field.value}
+                    defaultValue={field.value as string}
                   >
                     {GenderOptions.map((option, i) => (
                       <div key={option + i} className="radio-group">
@@ -417,7 +417,7 @@ const RegisterForm = ({
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
-              name="currentMedication"
+              name="currentMedications"
               label="Current medications"
               placeholder="Ibuprofen 200mg, Levothyroxine 50mcg"
             />
@@ -428,17 +428,9 @@ const RegisterForm = ({
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
-              name="familyMedicalHistory"
-              label=" Family medical history (if relevant)"
-              placeholder="Mother had brain cancer, Father has hypertension"
-            />
-
-            <CustomFormField
-              fieldType={FormFieldType.TEXTAREA}
-              control={form.control}
-              name="pastMedicalHistory"
-              label="Past medical history"
-              placeholder="Appendectomy in 2015, Asthma diagnosis in childhood"
+              name="medicalHistory"
+              label="Medical history (family and past)"
+              placeholder="Mother had brain cancer, Father has hypertension, Appendectomy in 2015, Asthma diagnosis in childhood"
             />
           </div>
         </section>

@@ -161,7 +161,7 @@ const RenderInput = <T extends FieldValues>({field, props}: {field: ControllerRe
 
 
 const CustomFormField = <T extends FieldValues>(props: CustomProps<T>) => {
-   const {control, name, label } = props;
+   const {control, name, label, fieldType } = props;
   return (
     <FormField
     control={control}
